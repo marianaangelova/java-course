@@ -1,0 +1,8 @@
+
+public class Examples {
+
+	public static void main(String[] args) {
+		char a = '\u7349';
+	}
+
+}

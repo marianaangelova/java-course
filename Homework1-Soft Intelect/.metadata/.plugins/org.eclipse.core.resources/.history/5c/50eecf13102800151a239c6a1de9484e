@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class FifthTask {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in,"UTF-8");
+		System.out.print("Enter four numbers: \n"+"a= ");
+		int a = input.nextInt();
+		System.out.print("b= ");
+		int b = input.nextInt();
+		System.out.print("c= ");
+		int c = input.nextInt();
+		System.out.print("d= ");
+		int d = input.nextInt();
+		input.close();
+		System.out.println("Sum: "+(a + b + c + d));
+	}
+
+}
