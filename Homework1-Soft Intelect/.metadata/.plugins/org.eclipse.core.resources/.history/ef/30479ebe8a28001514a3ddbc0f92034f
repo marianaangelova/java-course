@@ -1,9 +1,0 @@
-import java.math.BigDecimal;
-public class Examples {
-
-	public static void main(String[] args) {
-		String s = "\"C:\\windows\\system32\\notepad.exe\"";
-		System.out.println(s);
-	}
-
-}

@@ -1,9 +1,0 @@
-
-public class Examples {
-
-	public static void main(String[] args) {
-		char a = '\u7349';
-		System.out.print(a);
-	}
-
-}
