@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class FirtsTask {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter length of triangle: ");
+		float length = input.nextFloat();
+		System.out.println("Enter width of triangle: ");
+		float width = input.nextFloat();
+		float triangleArea = length*width;
+		System.out.println("S=a.b =>");
+		System.out.println("The area of your triangle is: "+triangleArea);
+		input.close();
+	}
+
+}

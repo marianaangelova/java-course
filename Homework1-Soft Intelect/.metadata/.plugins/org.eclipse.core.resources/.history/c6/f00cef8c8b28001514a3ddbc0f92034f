@@ -1,0 +1,9 @@
+
+public class Examples {
+
+	public static void main(String[] args) {
+		char a = '\u004D';
+		System.out.print(a);
+	}
+
+}
