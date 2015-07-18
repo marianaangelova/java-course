@@ -130,7 +130,7 @@ public class NumbersFrom0To999 {
             }
         }
         else {
-        	System.out.println("Invalid number!Enter number between 0-999!");
+        	System.out.println("Enter number between 0-999!");
         }
 	}
 }
