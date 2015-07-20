@@ -1,0 +1,28 @@
+
+public class NFactorialKFactorial {
+
+	public static void main(String[] args) {
+		int n = 10;
+
+        long factorial = 1;
+
+        for (int i = 1; i <= n; i++)
+        {
+            factorial = factorial * i;
+        }
+
+        int k = 8;
+
+        long factorialk = 1;
+
+        for (int i = 1; i <= k; i++)
+        {
+            factorialk = factorialk * i;
+        }
+
+        System.out.println("N!/K! =  " + factorial / factorialk);
+
+    }
+	}
+
+}

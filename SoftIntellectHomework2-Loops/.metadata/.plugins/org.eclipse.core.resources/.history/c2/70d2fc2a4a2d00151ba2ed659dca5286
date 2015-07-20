@@ -1,0 +1,18 @@
+
+import java.util.Scanner;
+public class NumbersFrom1ToN {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter n: ");
+		int number = input.nextInt();
+		
+		for(int i = 1;i <= number;i++) {
+			if((number % 3 == 0) || (number % 7 == 0)) {
+				continue;
+			}
+			System.out.print(i+" ");
+		}
+	}
+
+}
