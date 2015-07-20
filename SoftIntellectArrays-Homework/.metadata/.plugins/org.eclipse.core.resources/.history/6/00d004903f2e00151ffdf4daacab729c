@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class NumbersFromAToB {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter \"a\" and \"b\".For a<b:\na=");
+		int a = input.nextInt();
+		System.out.print("b = ");
+		int b = input.nextInt();
+		
+		for(int i = a;i <= b;i++) {
+			if(i % 3 == 0) {
+				System.out.print(i+" ");
+			}
+		}
+	}
+
+}
