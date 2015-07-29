@@ -1,0 +1,50 @@
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+import org.omg.CORBA.INV_FLAG;
+
+public class NumbersFrom1To30000 {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		int n = input.nextInt();
+		
+	
+		int[] array = new int[n];
+		String inputString = input.nextLine();
+		
+		for (int i = 0; i < n; i++) {
+			array[i] = input.nextInt();
+		}
+		
+		
+		reverseArray(array);
+		System.out.println(Arrays.toString(array));
+		
+		
+		String result = reverseArray(inputString);
+		System.out.println(result);
+	}
+	public static  void reverseArray(int [] arrayToReverse) {
+		
+		
+		for (int i = 0; i < arrayToReverse.length/2; i++) {
+			int temp = arrayToReverse[i];
+			arrayToReverse[i] = arrayToReverse[arrayToReverse.length - i - 1];
+			arrayToReverse[arrayToReverse.length - i - 1] = temp;
+		}
+	}public static  String reverseArray(String stringToReverse) {
+		
+		String reversedString = "";
+		for(int i=stringToReverse.length()-1;i>=0;i--){
+			reversedString+=stringToReverse.charAt(i);
+		}
+		return reversedString;
+	}
+	
+	
+}

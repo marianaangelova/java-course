@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Greeting {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Please enter your name: ");
+		String name = input.nextLine();
+		greeting(name);
+	}
+	public static void greeting(String name) {
+		name.substring(0).toUpperCase();
+		System.out.printf("Greeting, %s!",name);
+		
+	}
+
+}

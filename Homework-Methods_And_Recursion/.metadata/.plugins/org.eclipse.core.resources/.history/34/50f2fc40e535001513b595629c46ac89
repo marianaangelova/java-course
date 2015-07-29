@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class MaxNumber {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Please, enter 3 integers:/na=/nb=/nc=");
+		int a = input.nextInt();
+		int b = input.nextInt();
+		int c = input.nextInt();
+		int max = findMaxNumber(findMaxNumber(a, b),c);
+		System.out.println("Max value is:"+max);
+	}
+	public static  int findMaxNumber(int a, int b) {
+		int max = 0;
+		if(a > b){
+			max = a;
+		}
+		else {
+			max = b;
+		}
+		return max;
+	}
+
+}

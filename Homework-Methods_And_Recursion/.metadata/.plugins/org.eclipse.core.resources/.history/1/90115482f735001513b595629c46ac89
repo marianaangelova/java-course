@@ -1,0 +1,36 @@
+import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+
+public class permutations {
+public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    int n = input.nextInt();
+    
+	
+	List<Integer> list = new ArrayList<Integer>();
+	for (int i = 1; i <=n; i++) {
+		list.add(i);
+	}
+	System.out.println(permute(list));
+}
+
+public static List<List<Integer>> permute(List<Integer> list) {
+	List<List<Integer>> permutations = new ArrayList<List<Integer>>();
+    permutations.add(new ArrayList<Integer>());
+
+    for ( int i = 0; i < list.size(); i++ ) {
+        List<List<Integer>> current = new ArrayList<List<Integer>>();
+        for ( List<Integer> permutation : permutations ) {
+            for ( int j = 1, n = permutation.size() + 1; j <= n; j++ ) {
+                List<Integer> temp = new ArrayList<Integer>(permutation);
+                temp.add(j);
+                current.add(temp);
+            }
+        }
+        permutations = new ArrayList<List<Integer>>(current);
+    }
+    
+    return permutations;
+}
+}

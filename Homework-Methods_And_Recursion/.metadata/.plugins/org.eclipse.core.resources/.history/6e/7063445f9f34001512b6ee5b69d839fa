@@ -1,0 +1,24 @@
+
+public class NumbersFrom1To30000 {
+
+	public static void main(String[] args) {
+		int number = 20;
+		sumNumbers(number);
+		
+	}
+	public static int sumNumbers(int number) {
+		long result = 0;
+		if (number <= 1 || number > 30000) {
+			System.out.println("Invalid ");
+			return number;
+		}
+		else {
+			for (int i = 0; i <= number ; i++) {
+				result += i;
+			}
+			
+			}
+		System.out.println(result);
+			return sumNumbers(number);
+		}
+}
