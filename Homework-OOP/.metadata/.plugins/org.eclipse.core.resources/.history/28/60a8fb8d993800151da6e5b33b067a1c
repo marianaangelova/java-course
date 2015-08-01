@@ -1,0 +1,11 @@
+package humans;
+
+public class ClassBasic {
+
+	public static void main(String[] args) {
+		Teacher ivanov = new Teacher("Petar","Ivanov",25,3,"chemistry");
+		ivanov.sayGoodDay();
+		ivanov.sayGoodbye();
+	}
+
+}

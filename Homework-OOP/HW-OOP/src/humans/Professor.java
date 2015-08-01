@@ -1,0 +1,33 @@
+package humans;
+
+public class Professor extends Lecturer implements CheckingHWSecond{
+	String title;
+	
+	public Professor(){
+		super();
+		this.title = "";
+	}
+	
+	public Professor(String name, String surname,int years,int workingExperience,String subject,String title) {
+		super(name,surname,years,workingExperience,subject);
+		setTitle(title);
+	}
+
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	public void sayTitle(){
+		System.out.println("My title is "+this.title);
+	}
+	
+	public void conductExams(){
+		System.out.println("I can conduct exams.");
+	}
+	public void checkingHomeworksSecondWay(){
+		System.out.println("I can check homeworks too.");
+	}
+}

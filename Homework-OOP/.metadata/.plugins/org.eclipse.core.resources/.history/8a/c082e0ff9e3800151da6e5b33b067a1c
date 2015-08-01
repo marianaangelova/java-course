@@ -1,0 +1,40 @@
+package humans;
+
+public class Lecturer extends Person{
+	String university;
+	static final int WEEK_LECTURES = 10;
+	
+	public Lecturer(){
+		setName("");
+		setSurname("");
+		setWorkingExperience(0);
+		setYears(0);
+		this.university = "";
+	}
+
+	public Lecturer(String name, String surname,int years,int workingExperience,String university) {
+		super(name,surname,years,workingExperience);
+		setUniversity(university);
+	}
+
+	public String getUniversity() {
+		return university;
+	}
+
+	public void setUniversity(String university) {
+		this.university = university;
+	}
+	
+	public void sayGoodDay(){
+		System.out.println("Good day!");
+	}
+	public void conductingExercises(double d){
+		System.out.printf("I am conducting %d hours excercises per week%n",d);
+	}
+	public void conductingExercises(int hoursExercises){
+		System.out.printf("I am conducting %f hours excercises per month%n",hoursExercises);
+	}
+	public void conductingExercises(String kindOfExercise){
+		System.out.printf("I am conducting %s excercises%n",kindOfExercise);
+	}
+}

@@ -1,0 +1,26 @@
+package humans;
+
+public class Teacher extends Person {
+	String subject;
+	
+	public Teacher(){
+		setName("");
+		setSurname("");
+		setWorkingExperience(0);
+		setYears(0);
+		this.subject = "";
+	}
+	
+	public Teacher(String name, String surname,int years,int workingExperience){
+		super(name,surname,years,workingExperience);
+		setSubject(surname);
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+	
+}

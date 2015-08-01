@@ -1,0 +1,26 @@
+package humans;
+
+public abstract class Person {
+	protected String name;
+	protected String surname;
+	protected int years;
+	protected int workingExperience;
+	int counter;
+	
+	Person(){
+		this.name = "";
+		this.surname = "";
+		this.years = 0;
+		this.workingExperience = 0;
+	}
+
+	public Person(String name, String surname, int years, int workingExperience) {
+		super();
+		this.name = name;
+		this.surname = surname;
+		this.years = years;
+		this.workingExperience = workingExperience;
+		counter++;
+	}
+	
+}

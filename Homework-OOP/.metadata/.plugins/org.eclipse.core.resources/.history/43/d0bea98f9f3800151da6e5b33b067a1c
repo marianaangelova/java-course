@@ -1,0 +1,40 @@
+package humans;
+
+public class ClassBasic {
+
+	public static void main(String[] args) {
+		Teacher ivanov = new Teacher("Petar","Ivanov",25,3,"chemistry");
+		ivanov.sayGoodDay();
+		ivanov.sayGoodbye();
+		System.out.println();
+		
+		Lecturer petrov = new Lecturer("Georgi","Petrov",35,10,"UNWE");
+		petrov.sayGoodDay();
+		petrov.conductingExercises(15);
+		petrov.conductingExercises(15);
+		petrov.conductingExercises("math");
+		System.out.println();
+		
+		String [] classes = {"3A","5B","7C","4A","7A"};
+		SchoolTeacher georgieva = new SchoolTeacher("Ivanka","Georgieva",50,25,"biology",classes);
+		georgieva.sayGoodDay();
+		georgieva.sayClasses(classes);
+		georgieva.amuseKids();
+		georgieva.sayGoodbye();
+		System.out.println();
+		
+		CollegeTeacher angelova = new CollegeTeacher("Mariana","Angelova",22,1,"IT","Marketing college");
+		angelova.sayGoodDay();
+		angelova.sayGoodbye();
+		System.out.println();
+		
+		Professor milev = new Professor("Nikolay","Milev",45,10,"Sofia University","professor");
+		milev.sayGoodDay();
+		milev.conductingExercises(10.2);
+		milev.conductingExercises(42);
+		milev.conductingExercises("sport");
+		milev.conductExams();
+		//System.out.println(Person.counter);
+	}
+
+}
