@@ -1,0 +1,6 @@
+package groceryStore;
+
+public class Desert {
+	String taste;
+	boolean isIced;
+}

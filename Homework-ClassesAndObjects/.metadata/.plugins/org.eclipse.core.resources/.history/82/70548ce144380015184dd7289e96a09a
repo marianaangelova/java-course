@@ -1,0 +1,58 @@
+package groceryStore;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public abstract class Stock {
+	int price;
+	boolean isAvailable;
+	
+	public Stock(){
+		this.price = 0;
+		isAvailable = false;
+	}
+	
+	
+	
+	public Stock(int price, boolean isAvailable) {
+		this.price = price;
+		this.isAvailable = isAvailable;
+	}
+
+
+
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
+	public boolean isAvailable() {
+		return isAvailable;
+	}
+	public void setAvailable(boolean isAvailable) {
+		this.isAvailable = isAvailable;
+	}
+	
+	public void sayPrice(){
+		System.out.printf("The price of the stock is %d dollars%n",this.price);
+	}
+	public void stockDepletion(boolean isAvailable){
+		if(isAvailable = false){
+			System.out.println("The product is not available!/n");
+		}
+	}
+	public void stockAdding(Stock[] stocks){
+		ArrayList<Stock> listStocks = new ArrayList<Stock>(Arrays.asList(stocks));
+		
+		boolean newElement = false;
+		int size = listStocks.size();
+		if (newElement) {
+			size = listStocks.size() + 1;
+			System.out.println("One item added");
+		}
+	}
+	
+	
+}

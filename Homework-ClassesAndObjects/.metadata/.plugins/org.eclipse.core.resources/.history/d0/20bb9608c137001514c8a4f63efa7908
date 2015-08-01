@@ -1,0 +1,31 @@
+package cars;
+
+public class SUV extends Car{
+	boolean isHighly;
+	
+	public SUV() {
+		super();
+		this.isHighly = false;
+	}
+	
+	
+	SUV(int price,boolean isHighly) {
+		super(price);
+		setHighly(isHighly);
+	}
+
+
+	public boolean isHighly() {
+		return isHighly;
+	}
+
+	public void setHighly(boolean isHighly) {
+		this.isHighly = isHighly;
+		if (isHighly) {
+			System.out.println("I am highly.%n");
+		}
+		else{
+			System.out.println("I am not highly.%n");
+		}
+	}
+}

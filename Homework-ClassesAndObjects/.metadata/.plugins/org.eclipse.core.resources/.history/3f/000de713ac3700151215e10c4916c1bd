@@ -1,0 +1,12 @@
+package ClassTask;
+
+public class Manipulating {
+
+	public static void main(String[] args) {
+		Policeman jonny = new Policeman(12,25,"officer");
+		
+		jonny.present();
+		jonny.sayRank();
+	}
+
+}

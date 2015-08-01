@@ -1,0 +1,6 @@
+package ClassTask;
+
+public class Employee {
+int workingHours;
+int salary;
+}

@@ -1,0 +1,27 @@
+package cars;
+
+public class Automobile extends Car{
+	private double fuelConsumption;
+
+	public Automobile() {
+		super();
+		this.fuelConsumption = 0;
+	}
+
+	Automobile(int price,double fuelConsumption) {
+		super(price);
+		setFuelConsumption(fuelConsumption);;
+	}
+
+
+	public double getFuelConsumption() {
+		return fuelConsumption;
+	}
+
+	public void setFuelConsumption(double fuelConsumption) {
+		this.fuelConsumption = fuelConsumption;
+	}
+//	public void sayFuelConsumption(){
+//		System.out.printf("My fuel consumtion is %f%n",this.fuelConsumption);
+//	}
+}

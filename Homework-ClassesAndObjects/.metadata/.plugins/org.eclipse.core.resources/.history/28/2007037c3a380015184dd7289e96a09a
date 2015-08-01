@@ -1,0 +1,36 @@
+package groceryStore;
+
+public abstract class Stock {
+	int price;
+	boolean isAvailable;
+	
+	public Stock(){
+		this.price = 0;
+		isAvailable = false;
+	}
+	
+	
+	
+	public Stock(int price, boolean isAvailable) {
+		super();
+		setPrice(price);
+		setAvailable(isAvailable);
+	}
+
+
+
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
+	public boolean isAvailable() {
+		return isAvailable;
+	}
+	public void setAvailable(boolean isAvailable) {
+		this.isAvailable = isAvailable;
+	}
+	
+}

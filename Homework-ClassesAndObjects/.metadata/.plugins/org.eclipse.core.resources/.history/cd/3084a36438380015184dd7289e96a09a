@@ -1,0 +1,5 @@
+package groceryStore;
+
+public class Meat extends Stock {
+
+}

@@ -1,0 +1,6 @@
+package ClassTask;
+
+public class Doctor extends Employee {
+private byte nightDuties;
+private byte dayDuties;
+}

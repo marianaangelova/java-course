@@ -1,0 +1,6 @@
+package ClassTask;
+
+public class Policeman extends Employee {
+private String poicemanRank;
+
+}

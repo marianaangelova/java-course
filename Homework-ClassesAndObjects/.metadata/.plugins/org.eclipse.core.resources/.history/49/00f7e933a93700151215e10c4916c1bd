@@ -1,0 +1,6 @@
+package ClassTask;
+
+public class Employee {
+protected int workingHours;
+protected int salary;
+}

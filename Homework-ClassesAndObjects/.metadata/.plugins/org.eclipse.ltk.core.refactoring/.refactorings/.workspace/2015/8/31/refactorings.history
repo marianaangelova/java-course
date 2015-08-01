@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;ClassesAndObjects-HW&apos; to &apos;ClassTask&apos;&#x0D;&#x0A;- Original element: &apos;ClassesAndObjects-HW&apos;&#x0D;&#x0A;- Renamed element: &apos;ClassesAndObjects-HW&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;ClassesAndObjects-HW&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=ClassesAndObjects-HW" name="ClassTask" references="true" stamp="1438420609589" version="1.0"/>
+</session>

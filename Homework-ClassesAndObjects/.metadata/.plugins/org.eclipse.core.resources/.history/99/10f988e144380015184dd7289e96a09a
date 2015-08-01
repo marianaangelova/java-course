@@ -1,0 +1,50 @@
+package groceryStore;
+
+public class FoodStore {
+	String name;
+	String location;
+public static void main(String[] args) {
+	
+	Stock pepsi = new Drink(2,true,false,"Pepsi");
+	Stock cola = new Drink(3,false,false,"Coca-Cola");
+	Stock chocolate = new Desert(5,true,"chocolate",false);
+	Stock icecream = new Desert(4,true,"vanilla",true);
+	Stock apple = new Fruit(1, false,"Bulgaria",35);
+	Stock cucumber = new Vegetable(2, true,"Gergana",30);
+	Stock chicken = new Meat(15, true,30,10);
+	
+	Stock[] stocks = {
+			pepsi, cola, chocolate, icecream, apple, cucumber, chicken
+	};
+	}
+	
+	
+	public FoodStore(){
+		super();
+		this.name = "";
+		this.location = "";
+	}
+	
+	public FoodStore(String name, String location) {
+		this();
+		setName(name);
+		setName(name);
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	
+}

@@ -1,0 +1,17 @@
+package degreesConvertor;
+
+import java.util.Scanner;
+
+public class DegreesConvertor {
+	public static double convertCelsiusToFarenheit(double temperatureCelsius) {
+		double temperatureFarenheit = temperatureCelsius *1.8 + 32;
+		return temperatureFarenheit;
+	}
+	public static void main(String[] args) {Scanner input = new Scanner(System.in);
+		System.out.println("Enter temperature in Celsius: ");
+		double temperature = input.nextDouble();
+		temperature =
+		convertCelsiusToFarenheit(temperature);
+		System.out.printf("The temperature in Farenheit degrees is %fºF.%n",temperature);
+	}
+}

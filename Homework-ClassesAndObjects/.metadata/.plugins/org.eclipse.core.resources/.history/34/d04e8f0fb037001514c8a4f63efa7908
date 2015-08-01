@@ -1,0 +1,35 @@
+package ClassTask;
+
+public class Employee {
+	protected int workingHours;
+	protected int salary;
+	
+	public Employee() {
+		this.workingHours = 0;
+		this.salary = 0;
+	}
+	
+	public Employee(int workingHours2, int salary2) {
+		this();
+		setWorkingHours(workingHours2);
+		setSalary(salary2);
+	}
+	
+	public int getWorkingHours() {
+		return workingHours;
+	}
+	public void setWorkingHours(int workingHours) {
+		this.workingHours = workingHours;
+	}
+	
+	public int getSalary() {
+		return salary;
+	}
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+	public void present(){
+		System.out.printf("Hi, I work %d hours and get %d dollars salary.%n"
+				,workingHours,salary);
+	}
+}

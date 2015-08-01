@@ -1,0 +1,32 @@
+package groceryStore;
+
+public class Vegetable extends Stock{
+	String variety;
+	double carbohydrates;
+	
+	public Vegetable(){
+		super();
+		this.variety = "";
+		this.carbohydrates = 0;
+	}
+	
+	
+	Vegetable(int price, boolean isAvailable,String variety, double carbohydrates) {
+		super(price, isAvailable);
+		setVariety(variety);
+		setCarbohydrates(carbohydrates);
+	}
+
+	public String getVariety() {
+		return variety;
+	}
+	public void setVariety(String variety) {
+		this.variety = variety;
+	}
+	public double getCarbohydrates() {
+		return carbohydrates;
+	}
+	public void setCarbohydrates(double carbohydrates) {
+		this.carbohydrates = carbohydrates;
+	}
+}

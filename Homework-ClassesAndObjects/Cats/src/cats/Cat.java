@@ -1,0 +1,37 @@
+package cats;
+
+public class Cat {
+	
+	private String name;
+	private int age;
+	
+	public Cat(){
+		this.name = "";
+		this.age = 0;
+	}
+	
+	public Cat(String name, int age) {
+		this();
+		setName(name);
+		setAge(age);
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public void say(){
+		System.out.printf("My name is %s.%n",this.name);
+		System.out.printf("I am %d years old.%n",this.age);
+		System.out.println();
+	}
+}
