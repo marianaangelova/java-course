@@ -1,0 +1,56 @@
+package classTask;
+
+public class User {
+	protected String email;
+	protected String password;
+	
+	public User(){
+		this.email = "";
+		this.password = "";
+	}
+	
+	public User(String email, String password) throws Exception{
+		setEmail(email);
+		setPassword(password);
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) throws Exception {
+		if (email.length() < 6) {
+			throw new Exception("Invalid email");
+		}
+		boolean hasSymbol = false;
+		for (int i = 0; i < email.length(); i++) {
+			if (email.contains("@")) {
+				hasSymbol = true;
+			}
+		}
+		if (hasSymbol = false) {
+			throw new Exception("Invalid email");
+		}
+		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) throws Exception {
+		if (password.length() < 6) {
+			throw new Exception("Invalid password");
+		}
+		boolean isFound = false;
+		for (int i = 0; i < password.length(); i++) {
+			
+			if (Character.isDigit(password.charAt(i))) {
+				isFound = true;
+			}
+			
+		}
+		if (isFound == false) {
+			throw new Exception("Invalid password");
+		}
+		this.password = password;
+	}
+	
+}

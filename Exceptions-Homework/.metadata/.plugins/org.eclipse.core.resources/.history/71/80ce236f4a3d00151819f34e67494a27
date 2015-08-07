@@ -1,0 +1,28 @@
+package homeworkTask;
+
+import java.math.BigDecimal;
+import java.util.Scanner;
+
+public class AccountsCheck {
+
+	public static void main(String[] args) {
+		try {
+			Account personalAccount = new PersonalAccount(new BigDecimal(100447488986), "Pesho", 9507183295L);
+			Account corporativeAccount = new CorporativeAccount(new BigDecimal(10000000), "CSC", 303030L);
+			Scanner input = new Scanner(System.in, "UTF-8");
+			Account personal2 = new PersonalAccount(new BigDecimal(-10), "Ivan", 9309163217L);
+			System.out.print("Personal: ");
+			isAccount(personalAccount);
+			System.out.print("Coorporative: ");
+			isAccount(corporativeAccount);
+			System.out.print("Scanner: ");
+			isAccount(input);
+			//isAccount(personal2);
+		} catch (InvalidAccountException e){
+			System.out.println(e.getMessage());
+		} catch (NegativeMoneyException e){
+			System.out.println(e.getMessage());
+		} 
+	}
+
+}

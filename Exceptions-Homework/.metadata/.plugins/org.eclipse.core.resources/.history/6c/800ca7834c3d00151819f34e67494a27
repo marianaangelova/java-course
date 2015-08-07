@@ -1,0 +1,36 @@
+package homeworkTask;
+
+import java.math.BigDecimal;
+
+public class PersonalAccount extends Account{
+	private String name;
+	long personalN;
+	
+	public PersonalAccount(){
+		super();
+		this.name = "";
+		this.personalN = 0;
+	}
+	
+	public PersonalAccount(BigDecimal amount,String name, long eGN) throws NegativeMoneyException {
+		super(amount);
+		setName(name);
+		setEGN(personalN);
+	}
+
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public long getEGN() {
+		return personalN;
+	}
+	public void setEGN(long eGN) {
+		personalN = eGN;
+	}
+	public void printPersonalN(){
+		System.out.println("Personal number:"+this.personalN);
+	}
+}

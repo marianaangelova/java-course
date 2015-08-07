@@ -1,0 +1,9 @@
+package homeworkTask;
+
+public class CheckingAccount {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
