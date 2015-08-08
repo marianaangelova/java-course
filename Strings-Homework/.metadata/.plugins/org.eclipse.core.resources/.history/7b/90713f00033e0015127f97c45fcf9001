@@ -1,0 +1,24 @@
+package bracketsPreference;
+
+import java.util.Scanner;
+
+public class BracketsPreference {
+
+	public static void main(String[] args) {
+		Scanner inputs = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Enter equation for check: ");
+		String input = inputs.nextLine();
+		
+		if(input.length() != 0) {
+            if(Checker.Balanced(input)){
+                System.out.println("\"" + input + "\"" + " is correct");
+            }else{
+            	System.out.println("\"" + input + "\"" + " is not correct");
+            }
+        }
+		
+		inputs.close();
+
+	}
+}

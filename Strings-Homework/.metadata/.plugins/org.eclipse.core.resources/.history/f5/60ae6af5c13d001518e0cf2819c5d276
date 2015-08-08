@@ -1,0 +1,21 @@
+package replacingWord;
+
+import java.util.Scanner;
+
+public class ReplacingWord {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter a word:");
+		String word = input.nextLine();
+		String wordToUpper = word.toUpperCase();
+		System.out.println("Enter a text:");
+		String text = input.nextLine();
+		String text2 = "";
+		if (text.contains(word)) {
+			text2 = text.replaceAll(word, wordToUpper);
+		}
+		System.out.println(text2);
+	}
+
+}

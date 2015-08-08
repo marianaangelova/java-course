@@ -1,0 +1,50 @@
+package readAndWrite;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class ReadAndWriteFile {
+	public static void main(String[] args) {
+		try {
+			String fileName = "C:\\Users\\Mariana\\workspace\\Strings-Homework\\HW-SecondPart\\FileForReading.txt";
+			String read = readFile(fileName);
+			//System.out.println(read);
+//		    read = read.replace(",", "");
+//		    read = read.replace(".", "");
+//		    read = read.replace(";", "");
+//		    read = read.replace("!", "");
+//		    read = read.replace("?", "");
+//		    read = read.replace("(", "");
+//		    read = read.replace(")", "");
+//		    read = read.replace("{", "");
+//		    read = read.replace("}", "");
+//		    read = read.replace("[", "");
+//		    read = read.replace("]", "");
+		    read = read.replaceAll("[-();:]+", "");
+			System.out.println(read);
+		} catch (FileNotFoundException e) {
+			System.out.println("The file does not exist! Unable to read it.");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	public static String readFile(String fileName) throws FileNotFoundException,IOException{
+			FileInputStream fis = new FileInputStream(fileName);
+			BufferedReader in = new BufferedReader(new InputStreamReader(fis));
+			StringBuilder fileContent = new StringBuilder();
+			while (in.ready()) {
+				fileContent.append(in.readLine());
+			}
+			String content = fileContent.toString();
+			
+			in.close();
+			fis.close();
+			return content;
+		
+		
+	}
+	
+}
