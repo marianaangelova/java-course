@@ -1,0 +1,31 @@
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class ReadFile {
+
+	public static void readFile(String fileName){
+		try {
+			FileInputStream fis = new FileInputStream(fileName);
+			BufferedReader in = new BufferedReader(new InputStreamReader(fis));
+
+			while (in.ready()) {
+				String tmp = in.readLine();
+				System.out.println(tmp);
+			}
+			in.close();
+			fis.close();
+		} catch (FileNotFoundException e) {
+			System.out.println("The file \"" + fileName +
+					"\" does not exist! Unable to read it.");
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	public static void main(String[] args) {
+		readFile("C:\\Users\\Mariana\\workspace\\SoftUni-StringExamples\\FileStream-Examples\\ReadMe.txt");
+		}
+
+}

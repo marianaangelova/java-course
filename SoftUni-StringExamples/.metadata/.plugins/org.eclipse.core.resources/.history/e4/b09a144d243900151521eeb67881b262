@@ -1,0 +1,9 @@
+package strings;
+
+public class UserInfoExtractor {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

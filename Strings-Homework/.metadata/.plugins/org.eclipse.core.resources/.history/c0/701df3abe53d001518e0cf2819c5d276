@@ -1,7 +1,0 @@
-package readAndWrite;
-
-public class WriteFile {
-	public static void writeFile(String fileContent){
-		
-	}
-}

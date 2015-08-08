@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class JustExample {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String msg = "Stand up, stand up, Balkan superman.";
+		System.out.printf("msg = \"%s\"%n",msg);
+		System.out.printf("msg.length()=%d%n",msg.length());
+		
+		for (int i = 0; i < msg.length(); i++) {
+			System.out.printf("msg[%d] = %c%n",i,msg.charAt(i));
+		}
+		String name = input.nextLine();
+		System.out.println("Your name is:"+name);
+		System.out.printf("Helo,%s,hava nice reading!",name);
+	}
+
+}

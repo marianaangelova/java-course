@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move package &apos;classTask_Sentence&apos; to &apos;String-HW/src&apos;&#x0D;&#x0A;- Original project: &apos;ClassTask&apos;&#x0D;&#x0A;- Destination element: &apos;String-HW/src&apos;&#x0D;&#x0A;- Original element: &apos;ClassTask/src/classTask_Sentence&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=String-HW/src" element1="/src&lt;classTask_Sentence" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1439029111613" version="1.0"/>
-</session>

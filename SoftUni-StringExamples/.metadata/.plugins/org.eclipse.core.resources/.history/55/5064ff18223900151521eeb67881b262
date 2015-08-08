@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class JustExample {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String msg = "Stand up, stand up, Balkan superman.";
+		System.out.printf("msg = \"%s\"%n",msg);
+		System.out.printf("msg.length()=%d%n",msg.length());
+		
+		for (int i = 0; i < msg.length(); i++) {
+			System.out.printf("msg[%d] = %c%n",i,msg.charAt(i));
+		}
+//		String name = input.nextLine();
+//		System.out.println("Your name is:"+name);
+//		System.out.printf("Helo,%s,hava a nice reading!",name);
+		
+		String word1 = "Java";
+		String word2 = "JAVA";
+		System.out.println(word1.equals(word2));
+		System.out.println(word1.equalsIgnoreCase(word2));
+		String score = "sCore";
+		String scary = "scary";
+		System.out.println(score.compareToIgnoreCase(scary));
+		System.out.println(scary.compareToIgnoreCase(score));
+		System.out.println(scary.compareTo(score));
+		String hel = "Hel";
+		String hello = "Hello";
+		String copy = hel + "lo";
+		System.out.println(copy == hello); 
+	}
+
+}

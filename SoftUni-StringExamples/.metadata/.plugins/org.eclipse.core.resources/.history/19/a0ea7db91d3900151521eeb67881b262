@@ -1,0 +1,11 @@
+
+public class JustExample {
+
+	public static void main(String[] args) {
+		String msg = "Stand up, stand up, Balkan superman.";
+		System.out.printf("msg = \"%s\"%n",msg);
+		System.out.printf("msg.length()=%d%n",msg.length());
+		
+	}
+
+}

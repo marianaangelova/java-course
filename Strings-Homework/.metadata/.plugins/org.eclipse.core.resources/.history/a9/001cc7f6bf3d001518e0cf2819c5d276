@@ -1,9 +1,0 @@
-package classTask_Sentence;
-
-public class CountriesAndCapitals {
-
-	public static void main(String[] args) {
-		
-	}
-
-}

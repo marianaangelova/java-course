@@ -1,0 +1,12 @@
+
+public class ExceptionProgram {
+
+	public static void main(String[] args) {
+		try {
+			throw new NullPointerException("How do you do");
+		} catch (NullPointerException npe) {
+			throw new RuntimeException(npe);
+		}
+	}
+
+}
