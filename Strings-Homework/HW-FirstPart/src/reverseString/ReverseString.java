@@ -1,0 +1,16 @@
+package reverseString;
+
+import java.util.Scanner;
+
+public class ReverseString {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String word = input.nextLine();
+		reverse(word);
+	}
+	public static void reverse(String word){
+		String reversed = new StringBuffer(word).reverse().toString();
+		System.out.println(reversed);
+	}
+}

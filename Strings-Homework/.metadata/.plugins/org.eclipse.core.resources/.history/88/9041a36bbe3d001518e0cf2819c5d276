@@ -1,0 +1,10 @@
+package replacingWord;
+
+public class ReplacingWord {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

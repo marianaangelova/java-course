@@ -1,0 +1,18 @@
+package reverseString;
+
+import java.util.Scanner;
+
+public class ReverseString {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String word = input.nextLine();
+		reverse(word);
+		System.out.println(word);
+		
+	}
+	public static String reverse(String word){
+		String result = new StringBuilder(word).reverse().toString()
+		return result;
+	}
+}

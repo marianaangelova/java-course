@@ -1,0 +1,15 @@
+package countingContent;
+
+import java.util.Scanner;
+
+public class WordCountent {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter a text:");
+		String text = input.nextLine();
+		System.out.println("Enter a word:");
+		Str
+	}
+
+}

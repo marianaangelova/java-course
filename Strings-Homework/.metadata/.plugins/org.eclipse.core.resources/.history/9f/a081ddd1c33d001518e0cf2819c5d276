@@ -1,0 +1,33 @@
+package replacingWord;
+
+import java.util.Scanner;
+
+public class ReplacingWord {
+
+	public static void main(String[] args) {
+		try {
+			Scanner input = new Scanner(System.in);
+			System.out.println("Enter a word:");
+			String word = input.nextLine();
+			
+			System.out.println("Enter a text:");
+			String text = input.nextLine();
+			wordToUpper(word, text);
+		} catch (NotAWordException exc) {
+			exc.getMessage();
+		}
+	}
+	public static void wordToUpper(String word,String text) throws NotAWordException{
+		boolean isWhitespace = word.matches("^\\s*$");
+		if (isWhitespace) {
+			throw new NotAWordException("This is not a word!Enter just one word!");
+		}
+		String wordToUpper = word.toUpperCase();
+		String text2 = "";
+		if (text.contains(word)) {
+			text2 = text.replaceAll(word, wordToUpper);
+		}
+		System.out.println(text2);
+	}
+
+}

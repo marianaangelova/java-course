@@ -1,0 +1,10 @@
+package readAndWrite;
+
+public class ClassBasic {
+
+	public static void main(String[] args) {
+		String fileName = "C:\\Users\\Mariana\\workspace\\Strings-Homework\\HW-SecondPart\\FileForReading.txt";
+		readFile(fileName);
+		}
+
+}
