@@ -1,0 +1,15 @@
+package wordCounter;
+
+import java.util.Scanner;
+
+public class WordCounter {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String[] words = new String[20];
+		for (int i = 0; i < words.length; i++) {
+			words[i] = input.nextLine();
+		}
+	}
+
+}

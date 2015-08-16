@@ -1,0 +1,72 @@
+package student;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Student {
+	private String name;
+	private String surname;
+	private long number;
+	
+	
+	public Student(String name, String surname, long number, Map<String, ArrayList<Double>> studentsMarks) {
+		super();
+		setName(surname);
+		setName(surname);
+		setNumber(number);
+		setStudentsMarks(studentsMarks);
+	}
+	private Map<String, ArrayList<Double>>studentsMarks = new HashMap<String,ArrayList<Double>>();
+	
+	public void addSubjectMark(String subject,ArrayList<Double>marks){
+		studentsMarks.put(subject, marks);
+	}
+	
+	public double calculateAvarageMark(String subject){
+		boolean contains = studentsMarks.containsKey(subject);
+		double average = 0;
+		if (contains) {
+			ArrayList<Double>marks = new ArrayList<Double>();
+			marks.addAll(studentsMarks.get(subject));
+			
+			for (Double mark:marks) {
+				average += mark;
+			}
+			average = average/marks.size();
+		}
+		else {
+			System.out.println("There is no such subject for this student!");
+		}
+		return average;
+	}
+	
+	public Map<String, ArrayList<Double>> getStudentsMarks() {
+		return studentsMarks;
+	}
+	public void setStudentsMarks(Map<String, ArrayList<Double>> studentsMarks) {
+		this.studentsMarks = studentsMarks;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getSurname() {
+		return surname;
+	}
+	public void setSurname(String surname) {
+		this.surname = surname;
+	}
+	
+	public long getNumber() {
+		return number;
+	}
+	public void setNumber(long number) {
+		this.number = number;
+	}
+	
+}

@@ -1,0 +1,48 @@
+package library;
+
+import java.util.ArrayList;
+import java.util.TreeMap;
+
+public class Basic {
+
+	public static void main(String[] args){
+		Book ulysses = new Book("Ulysses", "James Joyce", 350);
+		Book greatGatsby = new Book("The great gatsby", "F. Scott Fitzgerald", 185);
+		Book lolita = new Book("Lolita", "Vladimir Nabokov", 400);
+		Book braveNewWorld = new Book("Brave new world", " Aldous Huxley", 400);
+		Book dune = new Book("Dune", " Frank Herbert", 500);
+		Book nativeSon = new Book("nativeSon", "Richard Wright", 400);
+		
+		ArrayList<Book> firstCollection = new ArrayList<>();
+		firstCollection.add(ulysses);
+		firstCollection.add(greatGatsby);
+		
+		ArrayList<Book> secondCollection = new ArrayList<>();
+		secondCollection.add(lolita);
+		secondCollection.add(braveNewWorld);
+		
+		ArrayList<Book> thirdCollection = new ArrayList<>();
+		thirdCollection.add(dune);
+		thirdCollection.add(nativeSon);
+		
+		TreeMap<String, ArrayList<Book>> firstMap = new TreeMap<>();
+		firstMap.put("The Hunger Games", firstCollection);
+		firstMap.put("Pride and Prejudice", secondCollection);
+		
+		
+		Library first = new Library("Prosveta", "Montana", firstMap);
+		System.out.println(first);
+		
+		first.addCopy("The Hunger Games");	
+		first.addCopy("The Hunger Games");
+		first.removeCopy("The Hunger Games");
+		first.addCopy("Pride and Prejudice");
+		first.removeCopy("Pride and Prejudice");
+		first.removeCopy("Pride and Prejudice");
+		first.addCopy("Programming");
+		first.removeCopy("Gone with the Wind");
+		
+		System.out.println(first);
+
+	}
+}

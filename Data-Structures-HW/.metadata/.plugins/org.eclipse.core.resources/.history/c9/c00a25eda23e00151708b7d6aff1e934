@@ -1,0 +1,29 @@
+package company;
+
+public class Company {
+	String name;
+	int countEmployee;
+	
+	public Company(String name, int countEmployee) {
+		super();
+		this.name = name;
+		this.countEmployee = countEmployee;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getCountEmployee() {
+		return countEmployee;
+	}
+	public void setCountEmployee(int countEmployee) {
+		this.countEmployee = countEmployee;
+	}
+	public String toString() {
+		return String.format("%s %s",this.name, this.countEmployee);
+	}
+	
+}

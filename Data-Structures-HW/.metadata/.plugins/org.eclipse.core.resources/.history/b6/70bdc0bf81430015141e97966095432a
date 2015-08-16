@@ -1,0 +1,37 @@
+package wordCounter;
+
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.Set;
+
+public class WordCounter {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String[] words = new String[20];
+		for (int i = 0; i < words.length; i++) {
+			words[i] = input.nextLine();
+		}
+	HashMap<String, Integer> countWord = new HashMap<String, Integer>();
+		
+	for (String word : words) {
+		Integer count = countWord.get(word);
+		if (count == null) {
+			count = 0; 
+		}
+		countWord.put(word, count + 1);
+	}
+	System.out.println(countWord.values());
+//	Set<String> wordKeys = countWord.keySet();
+//	
+//	System.out.println();
+//	
+//	for (String word : wordKeys) {
+//		int counter = countWord.get(word);
+//		System.out.printf(" %s - %d time\n", word, counter);
+//	}
+	}
+
+}
+
+	

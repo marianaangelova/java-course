@@ -1,0 +1,136 @@
+package student;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Testing {
+
+	public static void main(String[] args) {
+		Map<String, ArrayList<Double>>naskoMarks = new HashMap<String,ArrayList<Double>>(5);
+		ArrayList<Double>marksNMath = new ArrayList<Double>();
+		marksNMath.add(3.5);
+		marksNMath.add(4.5);
+		marksNMath.add(5.5);
+		marksNMath.add(4.5);
+		naskoMarks.put("math", marksNMath);
+		
+		ArrayList<Double>marksNPhysic = new ArrayList<Double>();
+		marksNPhysic.add(3.5);
+		marksNPhysic.add(2.0);
+		marksNPhysic.add(5.5);
+		marksNPhysic.add(4.5);
+		naskoMarks.put("physic", marksNPhysic);
+		
+		ArrayList<Double>marksNPBiology = new ArrayList<Double>();
+		marksNPBiology.add(3.5);
+		marksNPBiology.add(2.0);
+		marksNPBiology.add(5.5);
+		marksNPBiology.add(4.5);
+		naskoMarks.put("byology", marksNPBiology);
+		
+		ArrayList<Double>marksNPHistory = new ArrayList<Double>();
+		marksNPHistory.add(3.5);
+		marksNPHistory.add(2.0);
+		marksNPHistory.add(5.5);
+		marksNPHistory.add(4.5);
+		naskoMarks.put("hystory", marksNPHistory);
+		
+		ArrayList<Double>marksNEnglish = new ArrayList<Double>();
+		marksNEnglish.add(3.5);
+		marksNEnglish.add(2.0);
+		marksNEnglish.add(5.5);
+		marksNEnglish.add(4.5);
+		naskoMarks.put("hystory", marksNEnglish);
+		
+		Student nasko = new Student("Nasko", "Petkov", 83483300L, naskoMarks);
+		
+		Map<String, ArrayList<Double>>martinMarks = new HashMap<String,ArrayList<Double>>(5);
+		ArrayList<Double>marksMMath = new ArrayList<Double>();
+		marksMMath.add(3.5);
+		marksMMath.add(4.5);
+		marksMMath.add(5.5);
+		marksMMath.add(4.5);
+		martinMarks.put("math", marksMMath);
+		
+		ArrayList<Double>marksMPhysic = new ArrayList<Double>();
+		marksMPhysic.add(3.5);
+		marksMPhysic.add(2.0);
+		marksMPhysic.add(5.5);
+		marksMPhysic.add(4.5);
+		martinMarks.put("physic", marksMPhysic);
+		
+		ArrayList<Double>marksMBiology = new ArrayList<Double>();
+		marksMBiology.add(3.5);
+		marksMBiology.add(2.0);
+		marksMBiology.add(5.5);
+		marksMBiology.add(4.5);
+		martinMarks.put("byology", marksMBiology);
+		
+		ArrayList<Double>marksMPHistory = new ArrayList<Double>();
+		marksMPHistory.add(3.5);
+		marksMPHistory.add(2.0);
+		marksMPHistory.add(5.5);
+		marksMPHistory.add(4.5);
+		martinMarks.put("hystory", marksMPHistory);
+		
+		ArrayList<Double>marksMEnglish = new ArrayList<Double>();
+		marksMEnglish.add(3.5);
+		marksMEnglish.add(2.0);
+		marksMEnglish.add(5.5);
+		marksMEnglish.add(4.5);
+		martinMarks.put("hystory", marksMEnglish);
+		
+		Student martin = new Student("Martin", "Georgiev", 9880083300L, martinMarks);
+		
+		Map<String, ArrayList<Double>>ivetaMarks = new HashMap<String,ArrayList<Double>>(5);
+		ArrayList<Double>marksIMath = new ArrayList<Double>();
+		marksIMath.add(6.0);
+		marksIMath.add(6.0);
+		marksIMath.add(6.0);
+		marksIMath.add(4.5);
+		ivetaMarks.put("math", marksIMath);
+		
+		ArrayList<Double>marksIPhysic = new ArrayList<Double>();
+		marksIPhysic.add(5.5);
+		marksIPhysic.add(6.0);
+		marksIPhysic.add(5.5);
+		marksIPhysic.add(3.5);
+		ivetaMarks.put("physic", marksIPhysic);
+		
+		ArrayList<Double>marksIBiology = new ArrayList<Double>();
+		marksIBiology.add(3.5);
+		marksIBiology.add(2.0);
+		marksIBiology.add(5.5);
+		marksIBiology.add(4.5);
+		ivetaMarks.put("biology", marksIBiology);
+		
+		ArrayList<Double>marksIHistory = new ArrayList<Double>();
+		marksIHistory.add(3.5);
+		marksIHistory.add(2.0);
+		marksIHistory.add(5.5);
+		marksIHistory.add(4.5);
+		ivetaMarks.put("hystory", marksIHistory);
+		
+		ArrayList<Double>marksIEnglish = new ArrayList<Double>();
+		marksIEnglish.add(3.5);
+		marksIEnglish.add(2.0);
+		marksIEnglish.add(5.5);
+		marksIEnglish.add(4.5);
+		ivetaMarks.put("hystory", marksNEnglish);
+		
+		Student iveta = new Student("Iveta", "Hristova", 9299283300L, ivetaMarks);
+		
+		ArrayList<Double>newMathMarks = new ArrayList<Double>();
+		newMathMarks.add(5.0);
+		newMathMarks.add(6.0);
+		
+		iveta.addSubjectMark("math",marksIMath, newMathMarks);
+		
+		System.out.println(iveta.calculateAvarageMark("biology"));
+
+        System.out.println(iveta.getStudentsMarks());
+	}
+
+}

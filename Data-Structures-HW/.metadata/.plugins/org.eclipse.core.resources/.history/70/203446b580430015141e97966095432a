@@ -1,0 +1,36 @@
+package wordCounter;
+
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.Set;
+
+public class WordCounter {
+
+	public static void main(String[] args) {
+//		Scanner input = new Scanner(System.in);
+		String[] words = { 
+		"merry", "java", "hello", "purple", "merry", "no", "gold",
+		"playing", "no", "green", "piano", "lemonade", "yellow",
+		"silver", "gold", "red", "sisi", "yellow"};
+	
+	HashMap<String, Integer> wordsCount = new HashMap<String, Integer>();
+		
+	for (String word : words) {
+		Integer count = wordsCount.get(word);
+		if (count == null) {
+			count = 0; 
+		}
+		wordsCount.put(word, count + 1);
+	}
+	
+	Set<String> wordKeys = wordsCount.keySet();
+	
+	System.out.println();
+	
+	for (String word : wordKeys) {
+		int count = wordsCount.get(word);
+		System.out.printf("we can find : %s  %d times\n", word, count);
+	}
+	}
+
+}

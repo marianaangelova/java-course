@@ -1,0 +1,39 @@
+package wordCounter;
+
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.Set;
+
+public class WordCounter {
+
+	public static void main(String[] args) {
+//		Scanner input = new Scanner(System.in);
+//		String[] words = new String[20];
+//		for (int i = 0; i < words.length; i++) {
+//			words[i] = input.nextLine();
+	//}
+		String[] words = {"penka", "veska", "java","penka","blago","reni","veska","milka","java"};
+//		StringBuilder build = new StringBuilder();
+//		for (int i = 0; i < words.length; i++) {
+//			build.append(words[i]+" ");
+//		}
+		
+		//System.out.println(bild.toString());
+		HashMap<String, Integer>countWord = new HashMap<String, Integer>();
+		Integer counter = 0;
+		for (String word:words) {
+			counter = countWord.get(word);
+			counter++;
+			countWord.put(word, counter);
+		}
+		Set<String> wordKeys = countWord.keySet();
+		
+		System.out.println();
+		
+		for (String word : wordKeys) {
+			int count = countWord.get(word);
+			System.out.printf("we can find : %s  %d times\n", word, count);
+		}
+	}
+
+}

@@ -1,0 +1,35 @@
+package wordCounter;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class WordCounter {
+
+	public static void main(String[] args) {
+//		Scanner input = new Scanner(System.in);
+//		String[] words = new String[20];
+//		for (int i = 0; i < words.length; i++) {
+//			words[i] = input.nextLine();
+	//}
+		String[] words = {"penka", "veska", "java","java","blago","reni","veska","milka","java"};
+		StringBuilder build = new StringBuilder();
+		for (int i = 0; i < words.length; i++) {
+			build.append(words[i]+" ");
+		}
+		
+		//System.out.println(bild.toString());
+		HashMap<String, Integer>result = new HashMap<String, Integer>();
+		for (int i = 0; i < words.length; i++) {
+			result.put(words[i], 0);
+		}
+		for (int i = 0; i < words.length; i++) {
+			int counter = 0;
+			if (build.substring(i) != null && build.substring(i).equals(words[i])) {
+				counter++;
+				result.put(words[i], counter);
+			}
+		}
+		System.out.println(result.get(1));
+	}
+
+}

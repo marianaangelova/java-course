@@ -1,0 +1,21 @@
+package wordCounter;
+
+import java.util.Scanner;
+
+public class WordCounter {
+
+	public static void main(String[] args) {
+//		Scanner input = new Scanner(System.in);
+//		String[] words = new String[20];
+//		for (int i = 0; i < words.length; i++) {
+//			words[i] = input.nextLine();
+	//}
+		String[] words = {"penka", "veska", "java","java","blago","reni","veska","milka","java"};
+		StringBuilder bild = new StringBuilder(" ");
+		for (int i = 0; i < words.length; i++) {
+			bild.append(words[i]);
+		}
+		System.out.println(bild.toString());
+	}
+
+}

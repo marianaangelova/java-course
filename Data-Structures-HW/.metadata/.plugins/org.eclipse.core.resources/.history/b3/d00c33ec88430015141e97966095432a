@@ -1,0 +1,41 @@
+package uniqueWords;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class UniqueWords {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String[] words = new String[20];
+		System.out.println("Enter text");
+		String text = input.nextLine();
+		System.out.println(textToArray(text));
+//	HashMap<String, Integer> wordsCount = new HashMap<String, Integer>();
+//		
+//	for (String word : words) {
+//		Integer count = wordsCount.get(word);
+//		if (count == null) {
+//			count = 0; 
+//		}
+//		wordsCount.put(word, count + 1);
+//	}
+//	for (String result: wordsCount.keySet()){
+//
+//        if (wordsCount.get(result) == 1) {
+//        	String key =result.toString();
+//            //String value = wordsCount.get(result).toString();  
+//            System.out.println(key);  
+//
+//		}
+//	} 
+	}
+	public static String textToArray(String text) {
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0 ; i < text.length(); i++)
+		sb.append(text.charAt(i)+" ");
+		return sb.toString();
+		}
+
+
+}

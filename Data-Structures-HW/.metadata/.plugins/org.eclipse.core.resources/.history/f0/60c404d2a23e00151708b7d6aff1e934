@@ -1,0 +1,42 @@
+package company;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Manipulate {
+
+	public static void main(String[] args) {
+		Company comp = new Company("IBM", 133);
+		Company comp2 = new Company("60K", 23);
+		Company comp3 = new Company("Metro", 45);
+		
+		ArrayList<Company> people = new ArrayList<Company>();
+		people.addAll(Arrays.asList(comp,comp2,comp3));
+		Company temp = people.get(0);
+		for (int i = 0; i < people.size(); i++) {
+			if (temp.getCountEmployee() < people.get(i).getCountEmployee()) {
+				temp = people.get(i);
+			}
+		}
+		people.remove(temp);
+		//System.out.println(people);
+		Company compAdded = new Company("Vivacom", 80);
+		Company compAdded2 = new Company("Mtel", 10220020);
+		Company compForReplace = new Company("Nestle", 348);
+		people.add(compAdded);
+		people.add(compAdded2);
+		String tempName = "";
+		int index = 0;
+		for (int i = 0; i < people.size(); i++) {
+			if (temp.getName().length() < people.get(i).getName().length()) {
+				index = i;
+				break;
+				
+				
+			}
+		}
+	people.set(index, compForReplace);
+		
+		System.out.println(people);
+	}
+}
