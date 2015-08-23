@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;passage&apos; in &apos;shortWords.ShorterThanThree.main(...)&apos; to &apos;textWithRegex&apos;&#x0D;&#x0A;- Original project: &apos;DataStructures_Part_2&apos;&#x0D;&#x0A;- Original element: &apos;shortWords.ShorterThanThree.main(String[]).passage&apos;&#x0D;&#x0A;- Renamed element: &apos;passage&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;passage&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;shortWords{ShorterThanThree.java[ShorterThanThree~main~\[QString;@passage!581!645!588!594!QString;!0!false" name="textWithRegex" references="true" stamp="1439746326654" version="1.0"/>
+</session>
