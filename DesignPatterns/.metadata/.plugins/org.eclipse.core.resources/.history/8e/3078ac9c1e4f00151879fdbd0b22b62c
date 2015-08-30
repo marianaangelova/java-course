@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class ClassBasic {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+DeviceFactory factory = DeviceFactory.getInstance();
+		
+		System.out.print("Enter device: ");
+		String deviceType = input.nextLine();
+		System.out.print("Enter model: ");
+		String model = input.nextLine();
+		System.out.print("Enter brand: ");
+		String brand = input.nextLine();
+		
+		if(deviceType.equalsIgnoreCase("TABLET")){
+			System.out.print("Enter operating system: ");
+			String price = input.nextLine();
+			Device device = factory.getDevice(deviceType, model, brand, operatingSystem);
+			device.sayInformation(device);
+		} else if(deviceType.equalsIgnoreCase("PHONE")){
+			System.out.print("Enter shape: ");
+			String color = input.nextLine();
+			Device device = factory.getDevice(deviceType, model, brand, color);
+			device.sayInformation(device);
+		} else if(deviceType.equalsIgnoreCase("LAPTOP")){
+			System.out.print("Enter color: ");
+			String weight = input.nextLine();
+			Device device = factory.getDevice(deviceType, model, brand, weight);
+			device.sayInformation(device);
+		}
+	}
+
+}

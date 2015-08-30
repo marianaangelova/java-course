@@ -1,0 +1,21 @@
+
+public class Laptop extends Device{
+	private String color;
+
+	public String getDeviceKind() {
+		return color;
+	}
+
+	public void setDeviceKind(String deviceKind) {
+		this.color = deviceKind;
+	}
+
+	public Laptop(String model, String brand, String deviceKind) {
+		super(model, brand);
+		this.color = deviceKind;
+	}
+	public void sayInformation(Laptop laptop){
+		System.out.printf("Brand:%s,Model:%s,%s%n",laptop.getBrand(),laptop.getModel(),laptop.getDeviceKind());
+	}
+	
+}

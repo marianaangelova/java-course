@@ -1,0 +1,20 @@
+
+public class Tablet extends Device{
+	private String operatingSystem;
+
+	public String getDeviceKind() {
+		return operatingSystem;
+	}
+
+	public void setDeviceKind(String deviceKind) {
+		this.operatingSystem = deviceKind;
+	}
+
+	public Tablet(String model, String brand, String deviceKind) {
+		super(model, brand);
+		this.operatingSystem = deviceKind;
+	}
+	public void sayInformation(Tablet tablet){
+		System.out.printf("Brand:%s,Model:%s,%s%n",tablet.getBrand(),tablet.getModel(),tablet.getDeviceKind());
+	}
+}

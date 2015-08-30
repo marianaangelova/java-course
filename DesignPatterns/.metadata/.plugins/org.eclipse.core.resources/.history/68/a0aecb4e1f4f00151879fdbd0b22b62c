@@ -1,0 +1,20 @@
+
+public class Phone extends Device{
+	private String shape;
+
+	public String getShape() {
+		return shape;
+	}
+
+	public void setShape(String deviceKind) {
+		this.shape = shape;
+	}
+
+	public Phone(String model, String brand, String shape) {
+		super(model, brand);
+		this.shape = shape;
+	}
+	public void sayInformation(Phone phone){
+		System.out.printf("Brand:%s,Model:%s,%s%n",phone.getBrand(),phone.getModel(),phone.getShape());
+	}
+}
