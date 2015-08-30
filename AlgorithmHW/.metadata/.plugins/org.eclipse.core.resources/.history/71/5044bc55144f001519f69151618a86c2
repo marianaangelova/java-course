@@ -1,0 +1,26 @@
+package sortNumbers;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class SortNumbers {
+	
+
+	public static void main(String[] args) {
+		Integer[] numbers = {2,1,4,3,6,7,0,9,3,10};
+		ArrayList<Integer>evenNumbers = new ArrayList<Integer>();
+		for (int i = 0; i < numbers.length; i++) {
+			if (numbers[i] % 2 == 0) {
+				evenNumbers.add(numbers[i]);
+			}
+		}
+		
+		System.out.println(evenNumbers);
+		int[] evenArray = new int[evenNumbers.size()];
+		for (int i = 0; i < evenArray.length; i++) {
+			evenArray[i] = evenNumbers.get(i);
+		}
+		Arrays.sort(evenArray);
+	}
+
+}

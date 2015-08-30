@@ -1,0 +1,75 @@
+package sortNumbers;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.swing.text.StyledEditorKit.ForegroundAction;
+
+public class example {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		 
+	   System.out.println("Input 10 number:");
+	 
+	    Integer array[] = new Integer[10];
+	    int odd = 0;
+	    int even = 0;
+	    ArrayList<Integer>evenNumbers = new ArrayList<Integer>();
+	    ArrayList<Integer>oddNumbers = new ArrayList<Integer>();
+	    for (int i = 0; i < 10; i++){
+	    	array[i] = input.nextInt();
+	    }   
+	    for(int j = 0; j < array.length; j++){
+			if(array[j] % 2 == 0){
+				evenNumbers.add(array[j]);
+				even++;
+			} else{
+				oddNumbers.add(array[j]);
+				odd++;
+			}
+		}
+	    
+	    int[] oddArray = new int[odd];
+		int[] evenArray = new int[even];
+		
+	    int temp = 0;
+	    int current = 0;
+	    int size = evenNumbers.size();
+	    if (evenNumbers.size()>1) // check if the number of orders is larger than 1
+        {
+            for (int x=0; x<evenNumbers.size(); x++) // bubble sort outer loop
+            {
+                for (int i=0; i < evenNumbers.size()-i; i++) {
+                    if (evenNumbers.get(i).compareTo(evenNumbers.get(i+1)) > 0)
+                    {
+                        temp = evenNumbers.get(i);
+                        evenNumbers.set(i,evenNumbers.get(i+1) );
+                        evenNumbers.set(i+1, temp);
+                    }
+                }
+            }
+        }
+	    System.out.println(evenNumbers);
+	    if (oddNumbers.size()>1) // check if the number of orders is larger than 1
+        {
+            for (int x=0; x<oddNumbers.size(); x++) // bubble sort outer loop
+            {
+                for (int i=0; i < oddNumbers.size()-1; i++) {
+                	
+                    if (evenNumbers.get(i).equals(evenNumbers.size())){
+                    	if (oddNumbers.get(i).compareTo(oddNumbers.get(i+1)) < 0)
+                        {
+                            temp = oddNumbers.get(i);
+                            oddNumbers.set(i,oddNumbers.get(i+1) );
+                            oddNumbers.set(i+1, temp);
+                        }
+					}
+                }
+            }
+        }
+	    System.out.println(oddNumbers.size());
+	}
+	
+
+}

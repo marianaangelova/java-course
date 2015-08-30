@@ -1,0 +1,48 @@
+package sortNumbers;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.swing.text.StyledEditorKit.ForegroundAction;
+
+public class example {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		 
+	   System.out.println("Input 10 number:");
+	 
+	    Integer array[] = new Integer[10];
+	    int odd = 0;
+	    int even = 0;
+	    ArrayList<Integer>evenNumbers = new ArrayList<Integer>();
+	    ArrayList<Integer>oddNumbers = new ArrayList<Integer>();
+	    for (int i = 0; i < 10; i++){
+	    	array[i] = input.nextInt();
+	    }   
+	    for(int j = 0; j < array.length; j++){
+			if(array[j] % 2 == 0){
+				evenNumbers.add(array[j]);
+				even++;
+			} else{
+				oddNumbers.add(array[j]);
+				odd++;
+			}
+		}
+	    
+	    int[] oddArray = new int[odd];
+		int[] evenArray = new int[even];
+		
+		for(int k = 0; k < evenNumbers.size(); k++){
+			evenArray[k] = evenNumbers.get(k);
+		}
+		
+		for(int l = 0; l < oddNumbers.size(); l++){
+			oddArray[l] = oddNumbers.get(l);
+		}
+		System.out.println(evenNumbers);
+	    System.out.println(oddNumbers);
+	}
+	
+
+}

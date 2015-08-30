@@ -1,0 +1,48 @@
+package sortNumbers;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class SortNumbers {
+
+	public static void main(String[] args) {
+//		int n, c, d, swap;
+	    Scanner input = new Scanner(System.in);
+	 
+	    System.out.println("Input 10 number:");
+	 
+	    int array[] = new int[10];
+	 
+	 
+	    for (int i = 0; i < 10; i++){
+	    	array[i] = input.nextInt();
+	    }     
+	}
+	public static void bubbleSort(ArrayList<Integer>evenNumbers){
+		int swap = 0;
+		for (int i = 0; i < 10; i++) {
+		      for (int j = 0; j < 10 - i; j++) {
+		        if (array[j] > array[j+1]) /* For descending order use < */
+		        {
+		          swap = array[j];
+		          array[j]   = array[j+1];
+		          array[j+1] = swap;
+		        }
+		      }
+	}
+	}
+		
+	public static void sortDescendingOrder(int[] array){
+		int swap = 0;
+		for (int i = 0; i < 10; i++) {
+		      for (int j = 0; j < 10 - i; j++) {
+		        if (array[j] > array[j+1]) /* For descending order use < */
+		        {
+		          swap = array[j];
+		          array[j]   = array[j+1];
+		          array[j+1] = swap;
+		        }
+		      }
+	}
+	}
+}

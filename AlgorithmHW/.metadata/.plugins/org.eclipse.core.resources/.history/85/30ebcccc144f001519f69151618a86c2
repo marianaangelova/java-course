@@ -1,0 +1,46 @@
+package sortNumbers;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class SortNumbers {
+	
+
+	public static void main(String[] args) {
+		Integer[] numbers = {2,1,4,3,6,7,0,9,3,10};
+		ArrayList<Integer>evenNumbers = new ArrayList<Integer>();
+		ArrayList<Integer>oddNumbers = new ArrayList<Integer>();
+		for (int i = 0; i < numbers.length; i++) {
+			if (numbers[i] % 2 == 0) {
+				evenNumbers.add(numbers[i]);
+			}
+		}
+		
+		for (int i = 0; i < numbers.length; i++) {
+			if (numbers[i] % 2 == 0) {
+				oddNumbers.add(numbers[i]);
+			}
+		}
+		
+		Integer[] evenArray = new Integer[evenNumbers.size()];
+		for (int i = 0; i < evenArray.length; i++) {
+			evenArray[i] = evenNumbers.get(i);
+		}
+		
+		Integer[] oddArray = new Integer[oddNumbers.size()];
+		for (int i = 0; i < oddArray.length; i++) {
+			oddArray[i] = oddNumbers.get(i);
+		}
+		
+		Arrays.sort(evenArray);
+		Arrays.sort(oddArray);
+		for (Integer arr:evenArray) {
+			System.out.print(arr+" ");
+		}
+		System.out.println();
+		for (Integer arr:oddArray) {
+			System.out.print(arr+" ");
+		}
+	}
+
+}
