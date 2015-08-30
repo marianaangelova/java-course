@@ -1,0 +1,29 @@
+package tree;
+
+import examples.Tree;
+import examples.Tree.TreeNode;
+
+public class TestTree {
+	public static void main(String[] args) {
+		TreeNode<String> parentNode = new TreeNode<String>("Parent"); 
+		System.out.println("Parent depth: " + depth(parentNode));
+		
+		Tree<Integer> tree =
+				new Tree<Integer>(7,
+						new Tree<Integer>(19,
+								new Tree<Integer>(1),
+								new Tree<Integer>(12),
+								new Tree<Integer>(31)),
+				new Tree<Integer>(21),
+				new Tree<Integer>(14,
+						new Tree<Integer>(23),
+						new Tree<Integer>(6))
+				);
+		tree.printDFS();
+	}
+	//unfinished logic...
+	public static <T> int depth(TreeNode<T> tree){
+    	int d = 0;
+    	return d;
+    }
+}
