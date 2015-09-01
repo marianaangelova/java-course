@@ -1,0 +1,44 @@
+package secondTask;
+
+public class ClassBasic {
+
+	public static void main(String[] args) {
+		Threads firtsThread = new Threads();
+		new Thread(){
+			public void run(){
+				firtsThread.printNumbers();
+			}
+		}.start();
+		
+		Threads secondThread = new Threads();
+		new Thread(){
+			public void run(){
+				secondThread.printMessage();
+			}
+		}.start();
+		firtsThread.notify();
+	}
+	synchronized void printNumbers(Thread secondThread){
+		for (int i = 0; i < 200; i++) {
+			if (i == 200) {
+				try {
+					secondThread.wait();
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
+				}
+			}
+			System.out.print(i+" ");
+		}
+	}
+	synchronized void printMessage(){
+		for (int i = 0; i < 3; i++) {
+			try {
+				Thread.sleep(500);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+			System.out.println("Running...");
+		}
+		notifyAll();
+	}
+}

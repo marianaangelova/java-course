@@ -1,0 +1,15 @@
+package firstTask;
+
+public class Thread_1 extends Thread{
+	public void run() {
+		System.out.println("c");
+		try {
+			Thread.sleep(4000);
+			System.out.println("The thread is started!");
+		} catch (InterruptedException e) {
+			System.out.println(e);
+			e.printStackTrace();
+		}
+		
+	}
+}

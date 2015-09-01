@@ -1,0 +1,5 @@
+package firstTask_SecondWay;
+
+public class Thread_1 extends Threads{
+
+}

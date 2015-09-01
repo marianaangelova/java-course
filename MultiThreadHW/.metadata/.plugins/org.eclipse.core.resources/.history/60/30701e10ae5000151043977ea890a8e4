@@ -1,0 +1,21 @@
+package secondTask;
+
+public class ClassBasic {
+
+	public static void main(String[] args) {
+		Threads firtsThread = new Threads();
+		new Thread(){
+			public void run(){
+				firtsThread.printNumbers();
+			}
+		}.start();
+		
+		Threads secondThread = new Threads();
+		new Thread(){
+			public void run(){
+				secondThread.printMessage();
+			}
+		}.start();
+		firtsThread.notify();
+	}
+}
