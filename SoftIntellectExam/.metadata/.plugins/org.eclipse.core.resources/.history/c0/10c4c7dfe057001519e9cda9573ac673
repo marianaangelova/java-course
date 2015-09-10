@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class Matrix {
+	private int matrixLength;
+	private int[][] matrix;
+	private int[][] rotatedMatrix;
+	
+	public Matrix() {
+		super();
+	}
+	
+	public Matrix(int matrixLength) {
+		super();
+		this.matrixLength = matrixLength;
+	}
+
+	public int getMatrixLength() {
+		return matrixLength;
+	}
+	public void setMatrixLength(int matrixLength) {
+		if (matrixLength < 2 || matrixLength > 9) {
+		}
+		this.matrixLength = matrixLength;
+	}
+	
+	public int[][] getMatrix() {
+		return matrix;
+	}
+	public void setMatrix(int[][] matrix) {
+		this.matrix = matrix;
+	}
+	
+	public int[][] getRotatedMatrix() {
+		return rotatedMatrix;
+	}
+	public void setRotatedMatrix(int[][] rotatedMatrix) {
+		this.rotatedMatrix = rotatedMatrix;
+	}
+	
+	public int[][] fillMatrix(int matrixLength){
+		Scanner input = new Scanner(System.in);
+		int rows = matrixLength;
+		int cols = matrixLength;
+		int[][] matrix = new int[rows][cols];
+		for (rows = 0; rows < matrixLength; rows++) {
+			 for (cols = 0; cols < matrixLength; cols++) {
+				 matrix[rows][cols] = input.nextInt();
+				}
+			}
+		return matrix;
+	}
+	public int[][] rotateMatrix(int[][] matrix){
+//		int[][] rotateMatrix = matrix;
+		
+	}
+	
+}

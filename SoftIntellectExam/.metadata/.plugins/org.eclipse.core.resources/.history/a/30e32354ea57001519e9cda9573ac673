@@ -1,0 +1,23 @@
+import java.util.Arrays;
+
+public class Test {
+
+	public static void main(String[] args) {
+		int matrixLength = 3;
+		int rows = matrixLength;
+		int cols = matrixLength;
+		Matrix matrix = new Matrix(matrixLength);
+		int[][] array = matrix.fillMatrix(matrixLength);
+		StringBuilder rotated = new StringBuilder();
+		//printing rotated matrix
+		for (rows = 0; rows < matrixLength ; rows++) {
+			 for (cols = matrixLength-1; cols >= 0; cols--) {
+				 System.out.print(array[cols][rows]+" ");
+				 rotated.append(array[cols][rows]+" ");
+				}
+			 rotated.append('\n');
+			 System.out.println();
+			}
+	}
+
+}

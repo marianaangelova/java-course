@@ -1,0 +1,20 @@
+import java.util.Arrays;
+
+public class Test {
+
+	public static void main(String[] args) {
+		int matrixLength = 3;
+		int rows = matrixLength;
+		int cols = matrixLength;
+		Matrix matrix = new Matrix(matrixLength);
+		int[][] array = matrix.fillMatrix(matrixLength);
+		System.out.println(Arrays.deepToString(array));
+		for (rows = 0; rows < matrixLength ; rows++) {
+			 for (cols = 0; cols < matrixLength; cols++) {
+				 System.out.print(array[cols][rows]+" ");
+				}
+			 System.out.println();
+			}
+	}
+
+}
